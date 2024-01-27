@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hotel Management" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <!-- Вкладка для Guests -->
+            <TabItem Header="Guests">
+                <StackPanel Margin="10">
+                    <TextBlock FontWeight="Bold" FontSize="16" Text="Guests" />
+                    <ListBox x:Name="guestListBox" DisplayMemberPath="FullName" />
+                    <Button Content="Refresh Guests" Click="RefreshGuests_Click" />
+                    <Button Content="Add Guest" Click="AddGuest_Click" />
+                    <Button Content="Update Guest" Click="UpdateGuest_Click" />
+                    <Button Content="Delete Guest" Click="DeleteGuest_Click" />
+                </StackPanel>
+            </TabItem>
+
+            <!-- Вкладка для Rooms -->
+            <TabItem Header="Rooms">
+                <StackPanel Margin="10">
+                    <TextBlock FontWeight="Bold" FontSize="16" Text="Rooms" />
+                    <ListBox x:Name="roomListBox" DisplayMemberPath="RoomNumber" />
+                    <Button Content="Refresh Rooms" Click="RefreshRooms_Click" />
+                    <Button Content="Add Room" Click="AddRoom_Click" />
+                    <Button Content="Update Room" Click="UpdateRoom_Click" />
+                    <Button Content="Delete Room" Click="DeleteRoom_Click" />
+                </StackPanel>
+            </TabItem>
+
+            <!-- Вкладка для GuestRooms -->
+            <TabItem Header="GuestRooms">
+                <StackPanel Margin="10">
+                    <TextBlock FontWeight="Bold" FontSize="16" Text="GuestRooms" />
+                    <ListBox x:Name="guestRoomListBox" DisplayMemberPath="Id" />
+                    <Button Content="Refresh GuestRooms" Click="RefreshGuestRooms_Click" />
+                    <Button Content="Add GuestRoom" Click="AddGuestRoom_Click" />
+                    <Button Content="Update GuestRoom" Click="UpdateGuestRoom_Click" />
+                    <Button Content="Delete GuestRoom" Click="DeleteGuestRoom_Click" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
